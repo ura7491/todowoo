@@ -1,0 +1,6 @@
+cd C:\Users\Admin\django\todowoo
+.todowoo\Scripts\activate.bat
+cd todowoo
+python manage.py runserver
+
+deactivate
