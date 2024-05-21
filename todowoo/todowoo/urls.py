@@ -18,19 +18,36 @@ from django.urls import path
 from todo import views
 
 urlpatterns = [
+    #Админка
     path('admin/', admin.site.urls),
 
-    # Auth
+    #Аутентификация
     path('signup/', views.signupuser, name='signupuser'),
+
+    #Вход
     path('login/', views.loginuser, name='loginuser'),
+
+    #Выход
     path('logout/', views.logoutuser, name='logoutuser'),
 
-    # Todos
+    #Главная страница
     path('', views.home, name='home'),
+
+    #Создание задачи
     path('create/', views.createtodo, name='createtodo'),
+
+    #Отображение задач
     path('current/', views.currenttodos, name='currenttodos'),
+
+    #Список завершенных задач
     path('completed/', views.completedtodos, name='completedtodos'),
+
+    #Посмотреть задачу
     path('todo/<int:todo_pk>', views.viewtodo, name='viewtodo'),
+
+    #Завершить задачу
     path('todo/<int:todo_pk>/complete', views.completetodo, name='completetodo'),
+
+    #Удалить задачу
     path('todo/<int:todo_pk>/delete', views.deletetodo, name='deletetodo'),
 ]
