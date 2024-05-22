@@ -15,11 +15,13 @@ class Todo(models.Model):
     #Дата завершения
     datecompleted = models.DateTimeField(null=True, blank=True)
 
-    #Важная задача
+    #Важность в задаче
     important = models.BooleanField(default=False)
 
     #Пользователь задачи
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    #Отображение заголовка на странице
     def __str__(self):
-        return self.title
+        # return self.title
+        return '{} - {}'.format(self.title, self.memo)

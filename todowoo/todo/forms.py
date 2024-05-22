@@ -5,4 +5,5 @@ from .models import Todo
 class TodoForm(ModelForm):
     class Meta:
         model = Todo
+        #Выбираем необходимые поля для отображение на страницы
         fields = ['title', 'memo', 'important']

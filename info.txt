@@ -4,3 +4,12 @@ cd todowoo
 python manage.py runserver
 
 deactivate
+________________________________
+памятка по Git
+git status
+git add -A
+git commit -m "My first project"
+
+git branch -M main
+git push -u origin main
+git pull

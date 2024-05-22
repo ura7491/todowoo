@@ -89,7 +89,7 @@ def viewtodo(request, todo_pk):
             form.save()
             return redirect('currenttodos')
         except ValueError:
-            return render(request, 'todo/viewtodo.html', {'todo':todo, 'form':form, 'error':'Неверная информация'})
+            return render(request, 'todo/viewtodo.html', {'todo':todo, 'form':form, 'error':'Переданы неверные данные!'})
 
 #Добавление задачи в завершенные
 @login_required
